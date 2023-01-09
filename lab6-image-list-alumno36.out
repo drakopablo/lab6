@@ -1,0 +1,10 @@
+[0m[0KREPOSITORY                     TAG       IMAGE ID       CREATED         SIZE[0K
+docker/getting-started         latest    3e4394f6b72f   2 weeks ago     47MB[0K
+python                         3.7       1f1a7b570f9e   2 weeks ago     907MB[0K[32G
+drakopablo/docker101tutorial   latest    24d4fd5badf8   2 weeks ago     47MB[0K
+docker101tutorial              latest    24d4fd5badf8   2 weeks ago     47MB[0K
+ubuntu                         latest    6b7dfa7e8fdb   4 weeks ago     77.8MB[0K
+alpine/git                     latest    22d84a66cda4   7 weeks ago     43.6MB[0K
+hello-world                    latest    feb5d9fea6a5   15 months ago   13.3kB[0K
+rocker/tidyverse               3.6.1     5c4c75978566   3 years ago     2.1GB[0K
+[0K

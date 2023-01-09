@@ -1,0 +1,87 @@
+[0m[0KSending build context to Docker daemon  333.3kB[0K
+[0KStep 1/13 : ARG PI_NB_SIZE=1000000[0K
+Step 2/13 : ARG PYTHON_VERSION=3.7[0K
+Step 3/13 : FROM python:${PYTHON_VERSION}[0K
+ ---> 1f1a7b570f9e[0K
+Step 4/13 : LABEL org.opencontainers.image.authors="Pablo Guillén Marquina <pablo.gui[0Kl
+len1@um.es>"[0K
+ ---> Using cache[0K
+ ---> 9bbcace9eb31[0K
+Step 5/13 : SHELL ["/bin/sh", "-c"][0K
+ ---> Using cache[0K
+ ---> 945ac428b6ac[0K
+Step 6/13 : COPY requirements.txt /tmp/[0K
+ ---> Using cache[0K
+ ---> 55a4f5912e19[0K
+Step 7/13 : RUN pip install --requirement /tmp/requirements.txt[0K
+ ---> Using cache[0K
+ ---> 1b1fda0085ce[0K
+Step 8/13 : COPY lab6-jupyter-files.zip /tmp/[0K
+ ---> Using cache[0K
+ ---> 6aed73d86a29[0K
+Step 9/13 : RUN unzip -q /tmp/lab6-jupyter-files.zip -d /home/[0K
+ ---> Using cache[0K
+ ---> 3e6ce663256f[0K
+Step 10/13 : WORKDIR /home[0K
+ ---> Using cache[0K
+ ---> 437a6e9f5746[0K
+Step 11/13 : ARG PI_NB_SIZE[0K
+[0K ---> Running in ae5c5e6befe5[0K
+[0KRemoving intermediate container ae5c5e6befe5[0K
+ ---> aed5a06bac8f[0K
+Step 12/13 : RUN ipython /home/pi-solution.ipynb ${PI_NB_SIZE}[0K
+[0K ---> Running in 80d7f154cb49[0K
+[0K
+         Computing pi in serial:[0K
+[0K
+         For 1000000 trials, pi = 3.142780[0K
+[0K
+790 ms ± 72.7 ms per loop (mean ± std. dev. of 3 runs, 1 loop each)[0K
+[0K
+         Computing pi in serial with numpy w/o arrays:[0K
+[0K
+         For 1000000 trials, pi = 3.142400[0K
+[0K
+741 ms ± 2.39 ms per loop (mean ± std. dev. of 3 runs, 1 loop each)[0K
+[0K
+         Computing pi in serial with numpy w/ arrays:[0K
+[0K
+         For 1000000 trials, pi = 3.137344[0K
+[0K
+28.3 ms ± 2.48 ms per loop (mean ± std. dev. of 3 runs, 10 loops each)[0K
+[0K
+         Computing pi with numba:[0K
+[0K
+         For 1000000 trials, pi = 3.144728[0K
+[0K
+7.83 ms ± 76.9 µs per loop (mean ± std. dev. of 3 runs, 100 loops each)[0K
+[0K
+         Computing pi in parallel version with numba:[0K
+[0K
+         For 1000000 trials, pi = 3.141744[0K
+[0K
+4.65 ms ± 357 µs per loop (mean ± std. dev. of 3 runs, 100 loops each)[0K
+[0;31;91m/usr/local/lib/python3.7/site-packages/nbformat/__init__.py:93: MissingIDFieldWarning[0K:
+ Code cell is missing an id field, this will become a hard error in future nbformat v[0Ke
+rsions. You may want to use `normalize()` on your notebooks before validations (avail[0Ka
+ble since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transp[0Ka
+rently, and will stop doing so in the future.[0K
+  validate(nb)[0K
+[0K[0mRemoving intermediate container 80d7f154cb49[0;31;91m[0K
+[0m ---> f34528461909[0K
+Step 13/13 : RUN ipython /home/kmer-solution.ipynb[0K
+[0K ---> Running in 6141808ff6d1[0K
+[0KStart[0K
+Number of generated k-mers: 268435456[0K
+[0K
+1.11 s ± 20.6 ms per loop (mean ± std. dev. of 2 runs, 1 loop each)[0K
+[0K
+Finish![0K
+[0KRemoving intermediate container 6141808ff6d1[0K
+ ---> b57cf099610c[0K
+Successfully built b57cf099610c[0K
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows [0KD
+ocker host. All files and directories added to build context will have '-rwxr-xr-x' p[0Ke
+rmissions. It is recommended to double check and reset permissions for sensitive file[0Ks
+ and directories.[0K
+[0K

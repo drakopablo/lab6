@@ -1,0 +1,23 @@
+[0m[0K
+Hello from Docker![0K
+This message shows that your installation appears to be working correctly.[0K
+[0K
+To generate this message, Docker took the following steps:[0K
+ 1. The Docker client contacted the Docker daemon.[0K
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.[0K
+    (amd64)[0K
+ 3. The Docker daemon created a new container from that image which runs the[0K
+    executable that produces the output you are currently reading.[0K
+ 4. The Docker daemon streamed that output to the Docker client, which sent it[0K
+    to your terminal.[0K
+[0K
+To try something more ambitious, you can run an Ubuntu container with:[0K
+ $ docker run -it ubuntu bash[0K
+[0K
+Share images, automate workflows, and more with a free Docker ID:[0K
+ https://hub.docker.com/[0K
+[0K
+For more examples and ideas, visit:[0K
+ https://docs.docker.com/get-started/[0K
+[0K
+[0K
